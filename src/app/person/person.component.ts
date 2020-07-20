@@ -14,4 +14,8 @@ export class PersonComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickPerson() {
+    alert('you clicked ' + this.name);
+  }
+
 }
