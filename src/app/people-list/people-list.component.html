@@ -1,0 +1,7 @@
+<div class="container my-3">
+  <h2>Simple *ngFor Usage with PeopleListComponent</h2>
+  <div class="card-deck">
+    <app-person *ngFor="let person of peopleArray" [name]="person" (personClicked)="parentFunctionHandler($event)">
+    </app-person>
+  </div>
+</div>

@@ -3,7 +3,13 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [ // add node as an option
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "src/typings.d.ts"
+    ],
   },
   "files": [
     "src/main.ts",

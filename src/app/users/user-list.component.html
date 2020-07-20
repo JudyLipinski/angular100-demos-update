@@ -1,0 +1,8 @@
+<div class="container-fluid">
+
+  <h2 class="mx-auto">UserListComponent</h2>
+  <div class="card-deck mx-auto">
+    <app-user-card *ngFor="let user of userArray" [user]="user" (userClicked)="parentFunctionHandler($event)">
+    </app-user-card>
+  </div>
+</div>

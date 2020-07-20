@@ -1,3 +1,18 @@
-<p>
-  product-list works!
-</p>
+<div class="container my-3">
+  <h2>Simple *ngFor Usage with ProductTableComponent</h2>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>Item #</th>
+        <th>Description</th>
+        <th>Quantity</th>
+      </tr>
+      <tr *ngFor="let product of products; let i = index; ">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
