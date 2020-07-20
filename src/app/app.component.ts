@@ -1,19 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
-          <p [hidden]="isHidden">Is it hidden?</p>
-          `,
-  styleUrls: ['./app.component.css']
+    <p>{{ numbers }}</p>
+  `
 })
 export class AppComponent implements OnInit {
-  isHidden: boolean;
+  numbers: number[];
 
   ngOnInit(): void {
-    this.isHidden = false;
+    this.numbers = [1, 2, 3];
 
-    setInterval(() => { this.isHidden = !this.isHidden; }, 1000);
+    const timerId = setInterval(() => {
+      this.numbers = [...this.numbers, Math.floor(Math.random() * 10)];
+
+      console.log(this.numbers);
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(timerId);
+    }, 4000);
   }
 }
-
