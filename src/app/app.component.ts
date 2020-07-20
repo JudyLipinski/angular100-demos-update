@@ -1,25 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <p>{{ numbers }}</p>
-  `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  numbers: number[];
-
-  ngOnInit(): void {
-    this.numbers = [1, 2, 3];
-
-    const timerId = setInterval(() => {
-      this.numbers.push(Math.floor(Math.random() * 10));
-      console.log(this.numbers);
-    }, 1000);
-
-    setTimeout(() => {
-      clearInterval(timerId);
-    }, 4000);
-  }
+export class AppComponent {
+  title = 'angular100-demos';
 }
-
