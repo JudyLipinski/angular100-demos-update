@@ -8,7 +8,7 @@
         <th>Description</th>
         <th>Quantity</th>
       </tr>
-      <tr *ngFor="let product of products; let i = index; ">
+      <tr *ngFor="let product of products; let i = index; trackBy:trackByFunction">
         <td>{{ i + 1 }}</td>
         <td>{{ product.description }}</td>
         <td>{{ product.quantity }}</td>
