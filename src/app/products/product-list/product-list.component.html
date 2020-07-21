@@ -1,6 +1,14 @@
-<div class="container my-3">
-  <h2>Simple *ngFor Usage with ProductTableComponent</h2>
+<h1>Products</h1>
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ i + 1 }}) {{ product.description }} {{ product.quantity }}
+  </li>
+</ul>
+<div *ngIf="!products">No products yet - wait 5 seconds</div>
 
+
+<div class="container my-3" *ngIf="products">
+  <h2>Simple *ngFor Usage with ProductTableComponent</h2>
   <table class="table">
     <tbody>
       <tr>
