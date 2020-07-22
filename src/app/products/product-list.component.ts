@@ -15,34 +15,11 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    setTimeout(() => {
-      this.products = [
-        { id: 1423, description: 'cups', quantity: 30 },
-        { id: 1232, description: 'spoons', quantity: 10000 },
-        { id: 353, description: 'knives', quantity: 0 },
-        { id: 324, description: 'notebooks', quantity: 15 },
-        { id: 1435, description: 'bottles', quantity: 3 },
-        { id: 126, description: 'crystals', quantity: 1 }
-      ];
-
-      this.intervalId = setInterval(() => {
-        this.products = [
-          { id: 1423, description: 'cups', quantity: this.differentQty++ },
-          { id: 1232, description: 'spoons', quantity: 10000 },
-          { id: 353, description: 'knives', quantity: 0 },
-          { id: 324, description: 'notebooks', quantity: this.differentQty++ },
-          { id: 1435, description: 'bottles', quantity: 3 },
-          { id: 126, description: 'crystals', quantity: 1 }
-        ];
-
-      }, 1000);
-
-    }, 5000);
-
-
-
-
-    setTimeout(() => { clearInterval(this.intervalId); }, 20000);
+    this.products = [
+      { id: 1, description: 'cups', quantity: 1, price: 12.99 },
+      { id: 2, description: 'spoons', quantity: 10000, price: 24.0 },
+      { id: 3, description: 'knives', quantity: 0, price: 53.23 }
+    ];
 
   }
 

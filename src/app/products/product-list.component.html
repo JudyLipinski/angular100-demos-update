@@ -1,29 +1,21 @@
 <h1>Products</h1>
 <ul *ngIf="products">
-  <li *ngFor="let product of products; let i = index" [ngSwitch]="product.quantity">
-    Qty: {{ product.quantity }} - {{ product.description }}
-
-    <span *ngSwitchCase="'0'" class="text-danger">Out of stock</span>
-    <span *ngSwitchCase="'1'" class="text-warning">Last one!</span>
-    <span *ngSwitchDefault class="text-primary">In stock</span>
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'USD' }}
   </li>
-
 </ul>
-<div *ngIf="!products">No products yet - wait 5 seconds</div>
 
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'EUR':'symbol-narrow' }}
+  </li>
+</ul>
 
-<div class="container my-3" *ngIf="products">
-  <h2>Simple *ngFor Usage with ProductTableComponent</h2>
-  <table class="table">
-    <tbody>
-      <tr>
-        <th>Item #</th>
-        <th>Description</th>
-        <th>Quantity</th>
-      </tr>
-      <tr *ngFor="let product of products; let i = index; trackBy:trackByFunction" app-product-row [product]="product"
-      [rowIndex]="i">
-    </tr>
-    </tbody>
-  </table>
-</div>
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'USD' | lowercase }}
+  </li>
+</ul>
