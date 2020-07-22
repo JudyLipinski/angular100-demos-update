@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PeopleService } from "./shared/people.service";
 import { Person } from "./shared/models/person.model";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-root",
