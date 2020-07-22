@@ -14,11 +14,12 @@ export class UserListComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit() {
+    console.log('calling service');
     this.service.getUsers().subscribe(
       (data: User[]) => {
         this.userArray = data;
       },
-      error => console.log("error occured", error)
+      error => console.log("error occurred", error)
 
     );
   }
