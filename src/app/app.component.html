@@ -1,8 +1,5 @@
-<div class="container">
-  <h1 class="display-4">Example Observables</h1>
-
-  <div class="my-4">
-    <app-observables-example></app-observables-example>
-  </div>
-
-</div>
+<ul>
+  <li *ngFor="let person of people">
+    {{ person.first_name }}
+  </li>
+</ul>

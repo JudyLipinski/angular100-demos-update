@@ -12,6 +12,11 @@ export class AppComponent implements OnInit {
   constructor(private peopleService: PeopleService) {}
 
   ngOnInit(): void {
-    this.people = this.peopleService.getPeople();
+    this.peopleService.getPeople().subscribe(
+      (data: Person[]) => {
+        this.people = data;
+      },
+      error => console.log("error occured", error)
+    );
   }
 }

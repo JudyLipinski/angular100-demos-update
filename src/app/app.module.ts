@@ -20,6 +20,7 @@ import { EvensObservableComponent } from './observables/evens-observable.compone
 import { FromObservableComponent } from './observables/from-observable.component';
 import { OddsObservableComponent } from './observables/odds-observable.component';
 import { OperatorsObservableComponent } from './observables/operators-observable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,7 +29,7 @@ import { OperatorsObservableComponent } from './observables/operators-observable
   declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent, FromObservableComponent, ObservablesExampleComponent, EvensObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
