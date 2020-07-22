@@ -1,8 +1,13 @@
 <h1>Products</h1>
 <ul *ngIf="products">
-  <li *ngFor="let product of products; let i = index">
-    {{ i + 1 }}) {{ product.description }} {{ product.quantity }}
+  <li *ngFor="let product of products; let i = index" [ngSwitch]="product.quantity">
+    Qty: {{ product.quantity }} - {{ product.description }}
+
+    <span *ngSwitchCase="'0'" class="text-danger">Out of stock</span>
+    <span *ngSwitchCase="'1'" class="text-warning">Last one!</span>
+    <span *ngSwitchDefault class="text-primary">In stock</span>
   </li>
+
 </ul>
 <div *ngIf="!products">No products yet - wait 5 seconds</div>
 
