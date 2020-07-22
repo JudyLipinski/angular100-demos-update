@@ -3,7 +3,8 @@ import { User } from './user';
 
 @Component({
   selector: 'app-user-card',
-  templateUrl: './user-card.component.html'
+  templateUrl: './user-card.component.html',
+  styles: ['.is-inactive {background-color: red}']
 })
 export class UserCardComponent implements OnInit {
 

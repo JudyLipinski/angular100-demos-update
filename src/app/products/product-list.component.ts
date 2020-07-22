@@ -3,7 +3,9 @@ import { Product } from './product';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styles: ['h2 {color: purple}']
+
 })
 export class ProductListComponent implements OnInit, OnDestroy {
   products: Product[];

@@ -9,6 +9,7 @@ const userdata = require('../data/users.json');
 })
 export class UserListComponent implements OnInit {
   userArray: any[];
+  showCard = true;
 
   ngOnInit() {
     this.userArray = userdata.users;
