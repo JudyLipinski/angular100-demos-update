@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  template: `
+    <button (click)="showNumbers = !showNumbers">
+      Toggle Show *ngIf for show numbers
+    </button>
+    <app-show-numbers *ngIf="showNumbers"></app-show-numbers>
+  `
 })
 export class AppComponent {
-  title = 'angular100-demos';
+  showNumbers = true;
 }

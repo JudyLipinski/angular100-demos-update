@@ -14,12 +14,12 @@ import { UserRowComponent } from './users/user-row.component';
 import { NgCodeExamplesComponent } from './ng-code-examples/ng-code-examples.component';
 import { TemperatureConverterPipe } from './temperature/temperature-converter.pipe';
 import { TempExampleComponent } from './temperature/temp-example.component';
-
+import { ShowNumbersComponent } from './show-numbers.component';
 
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
-  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent],
+  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent],
   imports: [
     BrowserModule,
     AppRoutingModule
