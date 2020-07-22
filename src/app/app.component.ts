@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
       (data: Person[]) => {
         this.people = data;
       },
-      error => console.log("error occured", error)
+      error => console.log("an error occurred", error)
     );
   }
 }
