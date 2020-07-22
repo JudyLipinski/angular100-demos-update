@@ -3,12 +3,11 @@ import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-odds-observable',
-  template: `<hr /><h2>Odds Observable</h2>
-              <p>Click and watch for error. Try again and click twice</p>
-              <button (click)="getObservableData()">Subscribe</button>
-              {{ numbers }}`
+  template: ` <hr /><h2>Odds Observable</h2>
+  <button (click)="getObservableData()">Subscribe</button>
+  {{ numbers }}`
 })
-export class OddsObservableComponent implements OnInit {
+export class OddsObservableComponent implements OnInit, OnDestroy {
 
   numbers = [];
   subscription: Subscription;
@@ -31,18 +30,23 @@ export class OddsObservableComponent implements OnInit {
 
   getObservableData() {
     this.subscription = this.oddsObservable
-      .subscribe({
-        // nextHandler
-      next: (val) => {
-        this.numbers = [...this.numbers, val];
-        console.log(val); },
+      .subscribe(
+        val => {
+          this.numbers = [...this.numbers, val];
+          console.log(val);
+        },
+        error => { alert('An error occured ' + error); }
+      );
+  }
 
-       // errorHandler
-       error: (error) => { alert('An error occurred ' + error); },
+  unsubscribe() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 
-        // completeHandler
-        complete: () => { console.log('called when complete'); },
-      });
+  ngOnDestroy() {
+    this.unsubscribe();
   }
 
 }

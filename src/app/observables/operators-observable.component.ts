@@ -6,7 +6,7 @@ import { Subscription, Observable } from 'rxjs';
 @Component({
   selector: 'app-operators-observable',
   template: ` <hr /><h2>Numbers Observable with Operators</h2>
-  <button (click)="getNegativeMultiplesOfThree()">Get Negative Multiples Of Three</button>
+  <button (click)="getNegativeMultiplesOfThree()">Get Multiples Of Three Doubled</button>
   <button *ngIf="isStarted" (click)="unsubscribe()">Stop</button>
   {{ numbers }}`
 })
@@ -27,13 +27,12 @@ export class OperatorsObservableComponent implements OnDestroy {
         filter(v => (v % 3 === 0)),
         map(v => v * -1)
       )
-      .subscribe({
-        next: val => {
+      .subscribe(
+        val => {
           this.numbers = [...this.numbers, val];
           console.log(val);
         },
-        error: error => { alert('An error occurred ' + error); }
-      }
+        error => { alert('An error occured ' + error); }
       );
   }
 

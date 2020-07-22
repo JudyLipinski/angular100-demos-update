@@ -1,0 +1,19 @@
+<div class="container my-3">
+  <h2>Simple *ngFor Usage with ProductTableComponent</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item #</th>
+        <th>Description</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index; trackBy:trackByFunction" app-product-row [product]="product"
+        [rowIndex]="i">
+      </tr>
+
+    </tbody>
+  </table>
+</div>

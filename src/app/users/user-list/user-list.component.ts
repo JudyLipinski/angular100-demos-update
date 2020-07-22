@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-const userdata = require('../data/users.json');
+import { User } from '../model/user';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -8,11 +8,19 @@ const userdata = require('../data/users.json');
   styles: []
 })
 export class UserListComponent implements OnInit {
-  userArray: any[];
+  userArray: User[];
   showCard = true;
 
+  constructor(private service: UserService) { }
+
   ngOnInit() {
-    this.userArray = userdata.users;
+    this.service.getUsers().subscribe(
+      (data: User[]) => {
+        this.userArray = data;
+      },
+      error => console.log("error occured", error)
+
+    );
   }
 
   parentFunctionHandler(name) {

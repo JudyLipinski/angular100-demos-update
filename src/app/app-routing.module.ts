@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductListComponent } from './products/product-list.component';
-import { UserListComponent } from './users/user-list.component';
-import { ObservablesExampleComponent } from './observables/observables-example.component';
+import { ProductListComponent } from './products/list/product-list.component';
+import { UserListComponent } from './users/user-list/user-list.component';
+import { ObservablesExampleComponent } from './observables/observables-list.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -20,5 +20,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-
-// { path: "users/:id", component: PersonDetailComponent },

@@ -19,7 +19,7 @@ export class ProductRowComponent implements OnInit {
   ngOnInit() {
     this.productQuantityClasses = {
       'text-warning': this.product.quantity < 10,
-      'text-danger': this.product.quantity === 0
+      'text-danger': this.product.quantity = 0
     };
   }
 

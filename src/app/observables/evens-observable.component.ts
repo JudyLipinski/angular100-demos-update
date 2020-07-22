@@ -3,12 +3,15 @@ import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-evens-observable',
-  templateUrl: './evens-observable.component.html',
-  styleUrls: ['./evens-observable.component.css']
+  template: ` <hr /><h2>Evens Observable</h2>
+              <button (click)="getObservableData()">Subscribe</button>
+              {{ numbers }}`
 })
 export class EvensObservableComponent implements OnInit, OnDestroy {
+
   numbers = [];
   subscription: Subscription;
+
   evensObservable: Observable<number>;
 
   ngOnInit() {
@@ -21,22 +24,14 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
       });
   }
 
-  subscribeWithReset() {
-    if (this.subscription) {
-      this.unsubscribe();
-      this.numbers = [];
-    }
-    this.doSubscribe();
-
-  }
-
-  doSubscribe() {
+  getObservableData() {
     this.subscription = this.evensObservable
-    .subscribe(
-      { next: (val) => {
+      .subscribe(
+        val => {
           this.numbers = [...this.numbers, val];
-          console.log(val); }
-     });
+          console.log(val);
+        }
+      );
   }
 
   unsubscribe() {
