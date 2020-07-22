@@ -1,9 +1,9 @@
 export interface Person {
-  name: string;
+  id: number;
+  first_name: string;
+  last_name: string;
   email: string;
-  age: number;
-}
-
-export interface RestrictedPerson extends Person{
-  age: 20|21|22;
+  gender: string;
+  avatar: string;
+  img: string;
 }

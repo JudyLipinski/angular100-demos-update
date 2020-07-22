@@ -1,14 +1,23 @@
 import { Component, OnInit } from "@angular/core";
+import { PeopleService } from "./shared/people.service";
+import { Person } from "./shared/models/person.model";
 
 @Component({
   selector: "app-root",
   template: `
-    <button (click)="showNumbers = !showNumbers">
-      Toggle Show *ngIf for show numbers
-    </button>
-    <app-show-numbers *ngIf="showNumbers"></app-show-numbers>
+    <ul>
+      <li *ngFor="let person of people">
+        {{ person.first_name }}
+      </li>
+    </ul>
   `
 })
-export class AppComponent {
-  showNumbers = true;
+export class AppComponent implements OnInit {
+  people: Person[];
+
+  constructor(private peopleService: PeopleService) {}
+
+  ngOnInit(): void {
+    this.people = this.peopleService.getPeople();
+  }
 }
