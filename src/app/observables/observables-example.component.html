@@ -1,0 +1,32 @@
+  <div class="my-4 border border-primary rounded p-5">
+    <h2>Observable using <em>from</em> operator. Sends back values and stops</h2>
+    <h3>Open the console to see the 4 separate calls being made</h3>
+    <app-from-operator></app-from-operator>
+  </div>
+  <hr />
+
+  <div class="mt-5 p-5 border rounded border-primary">
+    <h2>Odds Observable.</h2>
+    <h3>Continues to generate odds every 1 second, then generates an error</h3>
+    <p>Open Console. Toggle Odds. Click Subscribe. Watch display. After 3 is reached an error is thrown by Observable.
+    </p>
+    <button (click)="isOddsOn=!isOddsOn">Toggle Odds Observable</button>
+    <app-odds-observable *ngIf="isOddsOn"></app-odds-observable>
+</div>
+
+  <div class="mt-5 p-5 border rounded border-primary">
+    <h2>Evens Observable.</h2>
+    <p>Click Toggle Evens Observable to make component available.</p>
+      <button (click)="isEvensOn=!isEvensOn">Toggle Evens Observable</button>
+    <app-evens-observable *ngIf="isEvensOn"></app-evens-observable>
+</div>
+
+
+<div class="mt-5 p-5 border rounded border-primary">
+    <h2>RxJS Operators with Observable.</h2>
+    <h3>Demos using operators from RxJS</h3>
+    <p>Open Console. Toggle Operators. Click Subscribe. Watch display. Notice the time between each additional number,
+        it's filtering by multiple of 3 and negating. </p>
+    <button (click)="isOperatorsOn=!isOperatorsOn">Toggle Operators Observable</button>
+    <app-operators-observable *ngIf="isOperatorsOn"></app-operators-observable>
+</div>

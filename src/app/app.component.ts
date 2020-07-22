@@ -4,13 +4,7 @@ import { Person } from "./shared/models/person.model";
 
 @Component({
   selector: "app-root",
-  template: `
-    <ul>
-      <li *ngFor="let person of people">
-        {{ person.first_name }}
-      </li>
-    </ul>
-  `
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   people: Person[];

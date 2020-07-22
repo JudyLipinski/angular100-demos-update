@@ -1,0 +1,10 @@
+<hr />
+<h3>Subscribe will continue to generate evens every 1 second</h3>
+<ol>Open Console and watch console and display while performing these steps.
+  <li>Click Subscribe with reset. Watch display. Click on Toggle Evens Observable button above twice, and note the work stops</li>
+  <li>Click Subscribe with reset. Watch display. Click unsubscribe. Note it stops.</li>
+  <li>Click Subscribe. Watch display. Click subscribe. What is happening?</li>
+</ol>
+{{ numbers }}<br />
+<button (click)="subscribeWithReset()">Subscribe with reset</button><button (click)="unsubscribe()">Unsubscribe</button>
+<button (click)="doSubscribe()">Subscribe with no reset</button>

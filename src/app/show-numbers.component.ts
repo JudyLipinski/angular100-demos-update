@@ -15,10 +15,10 @@ export class ShowNumbersComponent implements OnInit, OnDestroy {
     this.numbers = [1, 2, 3];
 
     this.intervalID = setInterval(() => {
-      //UPDATES SCREEN
+      // UPDATES SCREEN
       this.numbers = [...this.numbers, Math.floor(Math.random() * 10)];
 
-      //DOES NOT UPDATE SCREEN
+      // DOES NOT UPDATE SCREEN
       // this.numbers.push(Math.floor(Math.random() * 10));
 
       console.log(
@@ -28,8 +28,8 @@ export class ShowNumbersComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
+    // Called once, before the instance is destroyed.
+    // Add 'implements OnDestroy' to the class.
     // clearInterval(this.intervalID);
   }
 }

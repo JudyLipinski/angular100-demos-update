@@ -15,11 +15,17 @@ import { NgCodeExamplesComponent } from './ng-code-examples/ng-code-examples.com
 import { TemperatureConverterPipe } from './temperature/temperature-converter.pipe';
 import { TempExampleComponent } from './temperature/temp-example.component';
 import { ShowNumbersComponent } from './show-numbers.component';
+import { ObservablesExampleComponent } from './observables/observables-example.component';
+import { EvensObservableComponent } from './observables/evens-observable.component';
+import { FromObservableComponent } from './observables/from-observable.component';
+import { OddsObservableComponent } from './observables/odds-observable.component';
+import { OperatorsObservableComponent } from './observables/operators-observable.component';
+
 
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
-  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent],
+  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent, FromObservableComponent, ObservablesExampleComponent, EvensObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule
