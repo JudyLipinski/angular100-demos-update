@@ -11,10 +11,12 @@ import { UserListComponent } from './users/user-list.component';
 import { UserCardComponent } from './users/user-card.component';
 import { UserTableComponent } from './users/user-table.component';
 import { UserRowComponent } from './users/user-row.component';
+import { NgCodeExamplesComponent } from './ng-code-examples/ng-code-examples.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, ],
+  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule
