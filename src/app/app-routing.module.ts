@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
-import { UserLoginComponent } from './user/user-login.component';
-import { UserEditComponent } from './user/user-edit.component';
+import { UserLoginComponent } from './users/user-login/user-login.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },

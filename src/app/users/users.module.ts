@@ -8,8 +8,8 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { UserRowComponent } from './user-row/user-row.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UserLoginComponent } from '../user/user-login.component';
-import { UserEditComponent } from '../user/user-edit.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 
 @NgModule({
