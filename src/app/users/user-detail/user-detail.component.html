@@ -6,5 +6,9 @@
     <!-- <h6 class="card-text text-muted">Birthday:{{user.dob}}</h6>
     <h6 [class.is-inactive]="!user.isActive">Active: {{user.isActive}}</h6>
     <h6>Email {{user.email}}</h6> -->
+    <h6>Email {{user.email}}</h6>
+    <button routerLink="logindetails" routerLinkActive="active" class="button mx-2">Show Login Info</button>
+    <button routerLink="edit" routerLinkActive="active" class="button">Edit User</button>
+    <router-outlet></router-outlet>
   </div>
 </div>

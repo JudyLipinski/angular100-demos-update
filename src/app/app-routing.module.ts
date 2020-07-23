@@ -3,12 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { UserLoginComponent } from './user/user-login.component';
+import { UserEditComponent } from './user/user-edit.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "users", component: UserListComponent },
-  { path: "users/:id", component: UserDetailComponent },
+  {
+    path: "users/:id", component: UserDetailComponent,
+    children: [
+      { path: 'logindetails', component: UserLoginComponent },
+      { path: 'edit', component: UserEditComponent }
+    ]
+  },
 
   {
     path: "products", //Angular 8 Notation with Promise
