@@ -5,7 +5,7 @@
     <h6 class="card-text text-muted">Birthday:{{user.dob}}</h6>
     <h6 [class.is-inactive]="!user.isActive">Active: {{user.isActive}}</h6>
     <div class="card-footer">
-      <button (click)="clickPerson()" class="btn btn-primary">
+      <button [routerLink]="['/users', user.id]" class="btn btn-primary">
         See Profile</button>
     </div>
   </div>
