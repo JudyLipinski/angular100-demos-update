@@ -1,4 +1,16 @@
-<h1 class="mx-auto pt-3 w-50 text-center">You must login to continue</h1>
-<div class="text-center" >
-<button (click)="login()">Fake Login Process</button>
+<div class="mx-auto pt-3 mb-5 w-50 text-center">
+  <h1>You must login to continue. user/root</h1>
+  <div class="my-6 text-center">
+    <button class="mr-2" (click)="login()">Fake Login Process</button>
+
+    <button class="mr-2" [routerLink]="['./loginTemplate']" routerLinkActive="router-link-active">Template Login
+      Form</button>
+    <button class="mr-2" [routerLink]="['./loginReactive']" routerLinkActive="router-link-active">Reactive Login
+      Form</button>
+    <button class="mr-2" [routerLink]="['./registerReactive']" routerLinkActive="router-link-active">Reactive
+      Register</button>
+  </div>
+  <div>
+    <router-outlet class="mt-3"></router-outlet>
+  </div>
 </div>

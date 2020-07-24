@@ -1,0 +1,26 @@
+<section class="sample-app-content">
+  <h1>Reactive Form Example:</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmitReactBased()">
+      <div *ngIf="isInvalidCredentials" class="alert alert-danger" role="alert">
+          Invalid username or password.
+        </div>
+    <p>
+        <label class="mr-3">Username:</label>
+        <input type="text" formControlName="username" name="username">
+        <!-- name attribute is not needed but helps with autocompletion -->
+    </p>
+    <p>
+        <label class="mr-3">Password:</label>
+        <input type="password" formControlName="password" name="password">
+        <span *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+          <mark *ngIf="formControls.password.errors.required">Password is required</mark>
+        </span>
+    </p>
+
+    <p>
+        <button class="mr-3" type="submit" [disabled]="!loginForm.valid">Submit (disabled check)</button>
+        <button type="submit">Submit (no disable check)</button>
+    </p>
+</form>
+
+</section>

@@ -20,9 +20,6 @@ export class LoginComponent {
     this.router.navigateByUrl(this.authService.redirectUrl);
   }
 
-  logout() {
-    this.authService.logout();
-    this.authService.redirectUrl = '/login';
-  }
+
 
 }

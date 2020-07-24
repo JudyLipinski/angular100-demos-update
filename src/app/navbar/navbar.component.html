@@ -52,6 +52,16 @@
           >Reactive Signup Component</a
         >
       </li>
+
+      <li *ngIf="!loggedIn" class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']"
+        routerLinkActive="router-link-active">Login</a>
+     </li>
+
+     <li *ngIf="loggedIn" class="nav-item">
+         <a class="nav-link" (click)="logout()"
+         routerLinkActive="router-link-active">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>
