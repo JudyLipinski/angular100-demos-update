@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-// import { ObservablesModule } from './observables/observables.module';
 import { UsersModule } from './users/users.module';
-// import { ProductsModule } from './products/products.module';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent,LoginComponent],
   imports: [BrowserModule,
     AppRoutingModule, HttpClientModule,
     // ObservablesModule, ProductsModule //If uncommented, would be loaded EAGERLY
