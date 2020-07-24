@@ -1,0 +1,36 @@
+<div class="container">
+  <div><h1>Template Driven Form</h1>
+    <span>Form state: </span>
+    <span class="badge badge-pill badge-info" *ngIf="form.touched">Touched</span>
+    <span class="badge badge-pill badge-warning" *ngIf="form.untouched">Untouched</span>
+    <span class="badge badge-pill badge-success" *ngIf="form.valid">Valid</span>
+    <span class="badge badge-pill badge-danger" *ngIf="form.invalid">Invalid</span>
+    <span class="badge badge-pill badge-primary" *ngIf="form.pristine">Pristine</span>
+    <span class="badge badge-pill badge-dark" *ngIf="form.dirty">Dirty</span>
+  </div>
+  <form #form="ngForm" (ngSubmit)="logForm(form.value)">
+    <label for="firstname">First name: </label>
+    <input type="text" id="firstname" name="firstname" #firstname ngModel required />
+    <span class="alert" *ngIf="firstname.invalid && firstname.touched">Please enter a firstName</span>
+
+    <br />
+    <label for="lastname">Last name:</label>
+    <input type="text" id="lastname" name="lastname" ngModel />
+    <br />
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" ngModel />
+    <br />
+    <label for="zip">Zip:</label>
+
+    <input id="zip" type="text" name="zip" ngModel required pattern="[0-9]{5}" #zip="ngModel" /><span class="alert" *ngIf="zip.invalid && zip.touched">Please enter a 5-digit zipcode</span>
+    <br />
+    <label>City:</label>
+    <input type="text" name="city" ngModel />
+    <br />
+    <label>Credit card:</label>
+    <div class="alert" *ngIf="cc.invalid">Please enter a 5-digit zipcode</div>
+    <input type="password" name="cc" #cc="ngModel" ngModel appCreditCardValidator />
+    <br />
+    <button type="submit" >Submit</button>
+  </form>
+</div>

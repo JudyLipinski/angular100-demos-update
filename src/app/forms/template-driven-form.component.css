@@ -1,0 +1,53 @@
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+label {width: 6em}
+
+input[type="text"].ng-valid[required] {
+  border-left: 5px solid #42a948; /* green */
+}
+
+input[type="text"].ng-invalid {
+  border-left: 5px solid rgb(243, 198, 198); /* red */
+}
+.alert {
+  padding: 10px;
+  color: white;
+  background-color: tomato;
+}
+
+span.badge {
+  margin: 10px;
+}
+
+/* field value is valid */
+.ng-valid {
+  color: green;
+}
+
+/* field value is invalid */
+.ng-invalid {
+  color: red;
+}
+
+/* field has not been clicked in, tapped on, or tabbed over */
+.ng-untouched {
+  color: grey;
+}
+
+/* field has been previously entered */
+.ng-touched {
+  color: black;
+}
+
+/* field value is unchanged from the default value */
+.ng-pristine {
+  color: black;
+}
+
+/* field value has been modified from the default */
+.ng-dirty {
+  color: blue;
+}

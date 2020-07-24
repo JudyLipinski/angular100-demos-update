@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Reactive From example</h1>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <label>Firstname:</label>
+  <input type="text" name="username" formControlName="username" >
+  <br/>
+  <label>Lastname:</label>
+  <input type="text" name="password" formControlName="password">
+  <br/>
+</form>
+</div>
