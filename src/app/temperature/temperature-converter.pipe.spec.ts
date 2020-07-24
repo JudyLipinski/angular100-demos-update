@@ -8,13 +8,13 @@ describe('TemperatureConverterPipe', () => {
 
   it('converts to Fahrenheit', () => {
     const pipe = new TemperatureConverterPipe();
-    console.log(`pipe.transform(0, 'F')`,pipe.transform(0, 'F'))
+    // console.log(`pipe.transform(0, 'F')`,pipe.transform(0, 'F'))
     expect(pipe.transform(0, 'F')).toBeCloseTo(32);
   });
 
   it('converts to Celsius', () => {
     const pipe = new TemperatureConverterPipe();
-    console.log(`pipe.transform(0, 'C')`,pipe.transform(0, 'F'))
+    // console.log(`pipe.transform(0, 'C')`,pipe.transform(0, 'F'))
     expect(pipe.transform(32, 'C')).toBeCloseTo(0);
   });
 
