@@ -10,7 +10,7 @@ export class FromObservableComponent {
   // emit number values, one at a time, when subscribed to
   arraySource: Observable<number> = from([1, 2, 3, 4]);
 
-  getData() {
+  getData(): void {
     // when clicked, this function subscribes, values added to array
     // this.arraySource.subscribe(emittedValue => {
     //   console.log(`values`, emittedValue);
