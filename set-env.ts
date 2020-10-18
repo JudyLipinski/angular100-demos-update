@@ -3,28 +3,15 @@ import { writeFile } from 'fs';
 const targetPath = './src/environments/environment.ts';
 // Load node modules
 const colors = require('colors');
-require('dotenv').config();   //load NODE env variables from .env
+require('dotenv').config();   // load NODE env variables from .env
 
 console.log('process.env.PORT :>> ', process.env.PORT);
 
 console.log('process.argv[2] :>> ', process.argv[2]);
 
-
-//'${process.env.SERVER_PORT}',
-//'${process.env.PORT}
-
-// `environment.ts` file structure
-// const envConfigFile = `export const environment = {
-//    apiUrl: ${process.argv[2]}
-//    port: ${process.argv[3]}'
-// };
-// `;
-
-
-
 const envConfigFile = `export const environment = {
   production: false,
-  apiUrl: ${process.env.npm_package_config_serverPort},
+  apiPort: ${process.env.npm_package_config_serverPort},
   port: ${process.env.npm_package_config_angularPort}
 };
 `;
