@@ -12,17 +12,19 @@ import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  { path: "login",
+  {
+    path: "login",
     component: LoginComponent
   },
 
-  { path: "users",
+  {
+    path: "users",
     component: UserListComponent,
     canActivate: [AuthGuard],
 
   },
 
-    {
+  {
     path: "users/:id", component: UserDetailComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
@@ -30,7 +32,6 @@ const routes: Routes = [
       { path: 'logindetails', component: UserLoginComponent },
       { path: 'edit', component: UserEditComponent }
     ],
-
   },
 
   {
@@ -55,7 +56,7 @@ const routes: Routes = [
   //loadChildren: './observables/observables.module#ObservablesModule' },
 
 
-{ path: "**", redirectTo: "/users" }
+  { path: "**", redirectTo: "/users" }
 ];
 
 @NgModule({
