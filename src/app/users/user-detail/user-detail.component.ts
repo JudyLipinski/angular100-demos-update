@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { UserService } from '../shared/user.service';
 import { User } from '../model/user';
 
@@ -15,7 +14,7 @@ export class UserDetailComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private service: UserService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const id = +this.activatedRoute.snapshot.paramMap.get('id');
     this.service.getUser(id).subscribe((user) => this.user = user);
   }
