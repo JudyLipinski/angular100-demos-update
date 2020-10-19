@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <p>{{ numbers }}</p>
-  `
+  template: `<p>{{ numbers }}</p>`
 })
 export class AppComponent implements OnInit {
   numbers: number[];
