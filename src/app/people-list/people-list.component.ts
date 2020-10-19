@@ -14,12 +14,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeopleListComponent implements OnInit {
 
-    peopleArray: any[];
+  peopleArray: any[];
 
-    constructor() { }
+  constructor() { }
 
-    ngOnInit(): void {
-      this.peopleArray = ['April', 'May', 'June'];
-    }
-
+  ngOnInit(): void {
+    this.peopleArray = ['April', 'May', 'June'];
   }
+
+}
