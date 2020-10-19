@@ -2,17 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-people-list',
-  template: `
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
-  `
+  templateUrl: './people-list.component.html',
+  styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
