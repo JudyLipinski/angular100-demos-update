@@ -5,12 +5,16 @@ import { Observable } from "rxjs";
 
 @Component({
   selector: "app-root",
-  templateUrl: './app.component.html'
+  template: `<ul>
+    <li *ngFor="let person of (people$ | async)">
+           {{ person.first_name }}
+    </li>
+  </ul>`
 })
 export class AppComponent implements OnInit {
   people$: Observable<Person[]>;
 
-  constructor(private peopleService: PeopleService) {}
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
     this.people$ = this.peopleService.getPeople();
