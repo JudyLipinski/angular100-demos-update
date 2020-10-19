@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'temperatureConverter'
 })
 export class TemperatureConverterPipe implements PipeTransform {
-  transform(value: number, unit: string) {
+  transform(value: number, unit: string): string {
     if (!isNaN(value)) {
       if (unit === 'C') {
         // console.log('converting to Celsius');
