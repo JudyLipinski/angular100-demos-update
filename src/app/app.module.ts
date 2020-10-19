@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SetYearComponent } from './set-year/set-year.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SetYearComponent
   ],
   imports: [
     BrowserModule,
