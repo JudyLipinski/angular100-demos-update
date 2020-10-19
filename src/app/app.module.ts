@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SetYearComponent } from './set-year/set-year.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SetYearComponent,
-    SayHelloComponent
+    SayHelloComponent,
+    DataBindingComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,

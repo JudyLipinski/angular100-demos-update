@@ -9,6 +9,7 @@ import { Person, RestrictedPerson } from "./shared/models/person.model";
     <p>Age: {{ person.age }}</p>
     <h2>Restricted Person</h2>
     <p>Age {{restrictedPerson.age}}
+    <app-property-binding></app-property-binding>
   `
 })
 export class AppComponent implements OnInit {
