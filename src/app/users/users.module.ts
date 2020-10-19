@@ -7,13 +7,9 @@ import { UserTableComponent } from './user-table/user-table.component';
 import { UserRowComponent } from './user-row/user-row.component';
 
 @NgModule({
- declarations: [UserListComponent,
-                UserCardComponent,
-                UserTableComponent,
-                UserRowComponent],
- imports: [
-   CommonModule
- ]
+ declarations: [UserListComponent, UserCardComponent,
+                UserTableComponent, UserRowComponent],
+ imports: [ CommonModule ]
 })
 export class UsersModule { }
 

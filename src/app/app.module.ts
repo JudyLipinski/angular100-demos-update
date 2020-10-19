@@ -13,8 +13,8 @@ import { ProductsModule } from './products/products.module';
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
   imports: [BrowserModule,
-    AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule, ProductsModule],
-  providers: [],
+    AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule,
+    ProductsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
