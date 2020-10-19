@@ -27,10 +27,8 @@ import { OddsObservableComponent } from './observables/odds-observable.component
 import { OperatorsObservableComponent } from './observables/operators-observable.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
-
 @NgModule({
+  // tslint:disable-next-line: max-line-length
   declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent, FromObservableComponent, ObservablesExampleComponent, EvensObservableComponent, OddsObservableComponent, OperatorsObservableComponent,HomeComponent, NavbarComponent, NotfoundComponent, ContactComponent, FooterComponent],
 
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
