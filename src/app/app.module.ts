@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
-  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent,UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent,TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent, FromObservableComponent, ObservablesExampleComponent, EvensObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
+  declarations: [AppComponent, PeopleListComponent, PersonComponent, ProductListComponent, ProductRowComponent, UserListComponent, UserCardComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, TemperatureConverterPipe, TempExampleComponent, ShowNumbersComponent, FromObservableComponent, ObservablesExampleComponent, EvensObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule
