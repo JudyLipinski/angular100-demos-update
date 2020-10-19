@@ -22,15 +22,7 @@ export class AppComponent implements OnInit {
       age: 34
     };
 
-    this.restrictedPerson = {...this.person,age:21}
-  }
-
-  someExample(): void {
-    const someVariable: any = 4;
-    someVariable.notARealFunction(); // no feedback, bad function
-
-    const somethingElse: Object = {};
-    somethingElse.toFixed();
-    // Error: Property 'toFixed' doesn't exist on type 'Object'.
+    this.restrictedPerson = { ...this.person, age: 21 };
   }
 }
+

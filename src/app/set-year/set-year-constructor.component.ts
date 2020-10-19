@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-set-year',
@@ -11,7 +11,7 @@ export class SetYearConstructorComponent {
   theYear: number;
 
   constructor() {
-    this.theYear = new Date().getFullYear()
+    this.theYear = new Date().getFullYear();
    }
-
 }
+

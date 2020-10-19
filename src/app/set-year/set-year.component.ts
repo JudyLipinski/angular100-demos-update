@@ -9,5 +9,5 @@ export class SetYearComponent {
   title = 'angular10-demos';
   isValid = true;
   theYear = 2019;
-
 }
+
