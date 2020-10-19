@@ -24,7 +24,7 @@ export class ShowNumbersComponent implements OnInit, OnDestroy {
       );
     }, 1000);
 
-    setTimeout(() => {clearInterval(this.intervalID); }, 4000);
+
   }
 
   ngOnDestroy(): void {
