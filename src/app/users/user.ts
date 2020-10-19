@@ -4,6 +4,7 @@ export interface User {
   "last_name": string;
   "email": string;
   "gender": string;
+  "isActive": boolean;
   "avatar": string;
   "img": string;
   "dob": string;

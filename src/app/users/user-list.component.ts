@@ -9,12 +9,13 @@ const userdata = require('../data/users.json');
 })
 export class UserListComponent implements OnInit {
   userArray: any[];
+  showCard = true;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.userArray = userdata.users;
   }
 
-  parentFunctionHandler(name): void {
+  parentFunctionHandler(name) {
     alert(`You sent ${name} up to list from child`);
   }
 

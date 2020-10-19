@@ -1,0 +1,21 @@
+<h1>Products</h1>
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'USD' }}
+  </li>
+</ul>
+
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'EUR':'symbol-narrow' }}
+  </li>
+</ul>
+
+<ul *ngIf="products">
+  <li *ngFor="let product of products; let i = index">
+    {{ product.description }}
+    Cost: {{ product.price | currency: 'USD' | lowercase }}
+  </li>
+</ul>
