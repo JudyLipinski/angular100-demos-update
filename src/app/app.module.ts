@@ -7,6 +7,9 @@ import { SetYearComponent } from './set-year/set-year.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { NoSideEffectsComponent } from './data-binding/no-side-effects.component';
+import { SafeNavComponent } from './safe-nav/safe-nav.component';
+import { UnsafeNavComponent } from './safe-nav/unsafe-nav.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
     SetYearComponent,
     SayHelloComponent,
     DataBindingComponent,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    NoSideEffectsComponent,
+    SafeNavComponent,
+    UnsafeNavComponent
   ],
   imports: [
     BrowserModule,

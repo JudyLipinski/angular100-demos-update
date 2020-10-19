@@ -8,8 +8,11 @@ import { Person, RestrictedPerson } from "./shared/models/person.model";
     <p>Email: {{ person.email }}</p>
     <p>Age: {{ person.age }}</p>
     <h2>Restricted Person</h2>
-    <p>Age {{restrictedPerson.age}}
+    <p>Age {{restrictedPerson.age}}</p>
     <app-property-binding></app-property-binding>
+    <app-no-side-effects></app-no-side-effects>
+    <app-safe-nav></app-safe-nav>
+    <!-- <app-unsafe-nav></app-unsafe-nav> -->
   `
 })
 export class AppComponent implements OnInit {
