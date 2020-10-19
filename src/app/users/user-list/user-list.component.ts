@@ -13,18 +13,19 @@ export class UserListComponent implements OnInit {
 
   constructor(private service: UserService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log('calling service');
-    this.service.getUsers().subscribe(
-      (data: User[]) => {
+    this.service.getUsers().subscribe({
+     next: (data: User[]) => {
         this.userArray = data;
       },
+      error:
       error => console.log("error occurred", error)
 
-    );
+    });
   }
 
-  parentFunctionHandler(name) {
+  parentFunctionHandler(name: string): void {
     alert(`You sent ${name} up to list from child`);
   }
 
