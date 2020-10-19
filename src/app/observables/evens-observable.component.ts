@@ -11,9 +11,9 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   evensObservable: Observable<number>;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.evensObservable =
-      Observable.create((observer) => {
+      new Observable((observer) => {
         let evenNumber = 0;
         setInterval(() => {
           observer.next(evenNumber += 2);
@@ -21,7 +21,19 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
       });
   }
 
-  subscribeWithReset() {
+
+
+  // ngOnInit() {
+  //   this.evensObservable =
+  //     Observable.create((observer) => {
+  //       let evenNumber = 0;
+  //       setInterval(() => {
+  //         observer.next(evenNumber += 2);
+  //       }, 1000);
+  //     });
+  // }
+
+  subscribeWithReset(): void {
     if (this.subscription) {
       this.unsubscribe();
       this.numbers = [];
@@ -30,7 +42,7 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
 
   }
 
-  doSubscribe() {
+  doSubscribe(): void {
     this.subscription = this.evensObservable
     .subscribe(
       { next: (val) => {
@@ -39,13 +51,13 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
      });
   }
 
-  unsubscribe() {
+  unsubscribe(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.unsubscribe();
   }
 

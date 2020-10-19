@@ -15,13 +15,13 @@ export class OddsObservableComponent implements OnInit {
 
   oddsObservable: Observable<number>;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.oddsObservable =
-      Observable.create((observer) => {
+      new Observable((observer) => {
         let oddNumber = 1;
         setInterval(() => {
           if (oddNumber > 3) {
-            observer.error('Thrown from Observable')
+            observer.error('Thrown from Observable');
           }
           observer.next(oddNumber);
           oddNumber += 2;
@@ -29,16 +29,17 @@ export class OddsObservableComponent implements OnInit {
       });
   }
 
-  getObservableData() {
+  getObservableData(): void {
     this.subscription = this.oddsObservable
       .subscribe({
         // nextHandler
-      next: (val) => {
-        this.numbers = [...this.numbers, val];
-        console.log(val); },
+        next: (val) => {
+          this.numbers = [...this.numbers, val];
+          console.log(val);
+        },
 
-       // errorHandler
-       error: (error) => { alert('An error occurred ' + error); },
+        // errorHandler
+        error: (error) => { alert('An error occurred ' + error); },
 
         // completeHandler
         complete: () => { console.log('called when complete'); },

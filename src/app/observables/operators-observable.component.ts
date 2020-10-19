@@ -18,7 +18,7 @@ export class OperatorsObservableComponent implements OnDestroy {
 
   constructor(private numberService: NumbersService) { }
 
-  getNegativeMultiplesOfThree() {
+  getNegativeMultiplesOfThree(): void {
     this.isStarted = true;
     this.numbers = [];
     this.subscription = this.numberService.getNumberObservable()
@@ -37,7 +37,7 @@ export class OperatorsObservableComponent implements OnDestroy {
       );
   }
 
-  unsubscribe() {
+  unsubscribe(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

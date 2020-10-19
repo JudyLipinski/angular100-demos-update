@@ -5,6 +5,18 @@
   To learn more about this file see: https://angular.io/config/solution-tsconfig.
 */
 {
+  "compilerOptions": {
+    "experimentalDecorators": true
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true
+  },
 
   "references": [
     {
