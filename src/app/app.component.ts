@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
     this.numbers = [1, 2, 3];
 
     const timerId = setInterval(() => {
-      this.numbers = [...this.numbers, Math.floor(Math.random() * 10)];
+      this.numbers =
+           [...this.numbers, Math.floor(Math.random() * 10)];
 
       console.log(this.numbers);
     }, 1000);
