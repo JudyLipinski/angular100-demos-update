@@ -12,8 +12,7 @@ import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
-  imports: [BrowserModule,
-    AppRoutingModule, HttpClientModule,
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,
     // ObservablesModule, ProductsModule //If uncommented, would be loaded EAGERLY
     UsersModule,
     ],
